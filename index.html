@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Block Blast</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="blockblast.css?v=2">
+</head>
+<body>
+  <div class="stage">
+    <main class="shell">
+      <header class="top">
+        <div class="best-pill">
+          <svg class="crown" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#ffd34d" d="M2.8 8.2 6.6 11 12 4.2 17.4 11l3.8-2.8L19 18.2H5L2.8 8.2z"/>
+            <path fill="#ffe58a" d="M5 18.2h14v2.2H5z"/>
+          </svg>
+          <strong id="best">0</strong>
+        </div>
+        <p class="score-hero"><strong id="score">0</strong></p>
+        <div class="top-balance" aria-hidden="true"></div>
+      </header>
+
+      <section class="board-wrap">
+        <div class="board-frame">
+          <canvas id="board" width="429" height="429" aria-label="Block Blast board"></canvas>
+          <div id="combo" class="combo" hidden></div>
+          <div id="overlay" class="overlay">
+            <div class="overlay-card">
+              <p class="overlay-title" id="overlay-title">Block Blast</p>
+              <p class="overlay-msg" id="overlay-msg">Place all three pieces. Clear full rows and columns.</p>
+              <button type="button" id="start-btn" class="btn">Play</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dock">
+        <p class="hint">Drag a piece onto the board, or tap a piece then a cell</p>
+        <div class="tray" aria-label="Piece tray">
+          <canvas id="slot0" class="slot" width="120" height="120" data-slot="0"></canvas>
+          <canvas id="slot1" class="slot" width="120" height="120" data-slot="1"></canvas>
+          <canvas id="slot2" class="slot" width="120" height="120" data-slot="2"></canvas>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <canvas id="drag" class="drag-layer" width="200" height="200" hidden></canvas>
+
+  <script src="blockblast.js?v=2"></script>
+</body>
+</html>
